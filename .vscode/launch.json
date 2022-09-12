@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open html lab1",
+            "file": "c:\\Users\\MU-206-05\\Documents\\GitHub\\reactJs1\\my-ap1\\src\\html lab1"
+        }
+    ]
+}

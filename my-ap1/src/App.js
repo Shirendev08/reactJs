@@ -22,9 +22,13 @@ const App = () => {
   }, [counter])
   return (
     <div className="App">
-      <button onClick={ ()=> setCounter(prevCount => prevCount-1) }>-</button>
+      <button onClick={ ()=> setCounter(prevCount => prevCount-1) }>-1</button>
+      <button onClick={ ()=> setCounter(prevCount => prevCount-5) }>-5</button>
+      <button onClick={ ()=> setCounter(prevCount => prevCount-10) }>-10</button>
       <h1>{counter}</h1>
-      <button onClick={ ()=> setCounter(prevCount => prevCount+1) }>+</button>
+      <button onClick={ ()=> setCounter(prevCount => prevCount+1) }>+1</button>
+      <button onClick={ ()=> setCounter(prevCount => prevCount+5) }>+5</button>
+      <button onClick={ ()=> setCounter(prevCount => prevCount+10) }>+10</button>
       <Person name="John" lastname="Doe" age={2+2}/>
     </div>
     

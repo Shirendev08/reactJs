@@ -17,7 +17,7 @@ function niilber(a){
 }
 console.log(niilber(2345))
 document.getElementById("math").innerHTML=x;
-
+    
     </script>   
 
 </body>

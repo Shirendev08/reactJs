@@ -30,7 +30,8 @@
 .sidebarListItem{
     display: flex;
     align-items: center;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;   
+    cursor: pointer; 
 }
 .sidebarIcon{
     margin-right: 15px;
@@ -54,6 +55,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    cursor: pointer;
 
 }
 

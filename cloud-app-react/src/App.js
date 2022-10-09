@@ -1,9 +1,15 @@
-
+import Navbar from "./components/navbar";
+import Hero from "./components/hero"
+import About from "./components/about"
+import Support from "./components/support"
 
 function App() {
   return (
     <>
-    <h1>hello</h1>
+    <Navbar/>
+    <Hero/>
+    <About/>
+    <Support/>
     </>
   );
 }

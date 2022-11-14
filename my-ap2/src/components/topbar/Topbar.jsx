@@ -6,7 +6,7 @@ export default function Topbar() {
   const urlLookup = "http://btax.mandakh.org:8000/lookup/";
   useEffect(() => {
     const bodyChiglel = {
-      action: "chiglel",
+      action: "aimagsum",
     };
     sendRequest(urlLookup, bodyChiglel);
   }, []);
@@ -27,12 +27,12 @@ export default function Topbar() {
         console.log(err.message);
       });
   };
-   console.log(datas)
+   console.log(datas.data[19].sumduud[7].sumname)
   return (
     <div className="topbarContainer">
 
       <div className="topbarLeft">
-        <span className="logo">{datas && datas.data[0].chiglelname}</span>
+        <span className="logo">{datas && datas.data[19].sumduud[7].sumname}</span>
       </div>
       <div className="topbarCenter">
         <div className="searchBar">

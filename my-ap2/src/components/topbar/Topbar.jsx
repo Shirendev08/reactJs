@@ -1,38 +1,54 @@
 import "./topbar.css"
 import { Search, Person, Chat, Notifications } from "@material-ui/icons"
 import { useState, useEffect } from "react";
+import {urlLookup, sendRequest} from "../../settings";
+import React from 'react';
+import { Button, notification } from 'antd';
+const openNotification = (title, desc) => {
+  notification.open({
+    message: title,
+    description:
+      desc,
+    onClick: () => {
+      console.log(desc , 'Clicked!');
+    },
+  });
+};
+
 export default function Topbar() {
   const [datas, setDatas] = useState();
-  const urlLookup = "http://btax.mandakh.org:8000/lookup/";
+
   useEffect(() => {
     const bodyChiglel = {
-      action: "aimagsum",
+      action: "chiglel",
     };
-    sendRequest(urlLookup, bodyChiglel);
+    sendRequest(urlLookup, bodyChiglel).then((data) => setDatas(data));
   }, []);
 
-  const sendRequest = async (url, body) => {
-    await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(body),
-    })
-      .then((res) => res.json())
-      .then(async (response) => {
-        setDatas(response);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-  };
-   console.log(datas.data[19].sumduud[7].sumname)
+  const onClickPrimary= (cnum, cname) =>{
+    openNotification(cnum, cname);
+    console.log(cname);
+  }
+
+  const DisplayData=datas && datas.data.map((gazar)=>{
+    return (
+     <div key={gazar.chiglelnum}>
+       <h5><Button type="primary" onClick={()=>onClickPrimary(gazar.chiglelnum, gazar.chiglelname)}>
+       {gazar.chiglelname}</Button></h5>
+       <br/>
+     </div>
+    )
+  });
+  
   return (
+    <>
+   {DisplayData}
+      
     <div className="topbarContainer">
 
+
       <div className="topbarLeft">
-        <span className="logo">{datas && datas.data[19].sumduud[7].sumname}</span>
+        <span className="logo">lamasocial</span>
       </div>
       <div className="topbarCenter">
         <div className="searchBar">
@@ -66,7 +82,7 @@ export default function Topbar() {
 
 
 
-    </div>
+    </div></>
   )
 }
  

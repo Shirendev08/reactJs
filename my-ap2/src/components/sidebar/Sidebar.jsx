@@ -2,7 +2,7 @@ import "./sidebar.css";
 import { RssFeed, Chat,PlayCircleOutline   ,Group , Bookmark, HelpOutline, WorkOutline, Event, School } from "@material-ui/icons";
 import { Users } from "../../dummyData";
 import CloseFriend from "../../components/closeFriend/CloseFriend";
-export default function Sidebar() {
+export default function Sidebar({friends}) {
   return (
     <div className="sidebar">
         <div className="sidebarWrapper">

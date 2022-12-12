@@ -61,7 +61,7 @@ export default function Topbar({ilgeesen}) {
         <div className="topbarLink">Timeline</div>
         
       
-
+              
       <div className="topbarIcons">
         <div className="topbarIconItem">
           <Person/>
@@ -77,7 +77,7 @@ export default function Topbar({ilgeesen}) {
         </div>
       </div>
       </div>
-      <img src={ilgeesen.data.profilePhoto} alt="" className="topbarImg"/>
+      <img src={ilgeesen.data.profilephoto    } alt="" className="topbarImg"/>
 
 
 

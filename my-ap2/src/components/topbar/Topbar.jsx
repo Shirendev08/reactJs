@@ -42,7 +42,7 @@ export default function Topbar({ilgeesen}) {
   
   return (
     <>
-   {/* {DisplayData} */}
+   {DisplayData}
       
     <div className="topbarContainer">
 

@@ -3,8 +3,8 @@ export const hariu = {
     data: {
       profilephoto: "/assets/person/1.jpeg",
       username: "Bolor",
-      friendRequest: 3,
-      chats: 3,
+      friendRequest: 99,
+      chats: 8,
       notif: 4,
       //ilgeesen.data.friends[i].friendname
       friends: [
